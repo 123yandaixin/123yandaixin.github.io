@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <script>
+function loadXMLDoc()
+{
+    var arm = "file:///etc/hosts";
+    var xmlhttp;
+    if (window.XMLHttpRequest)
+    {
+        xmlhttp=new XMLHttpRequest();
+    }
+    xmlhttp.onreadystatechange=function()
+    {
+        
+		alert("status is"+xmlhttp.status);
+        <!--if (xmlhttp.readyState==4)-->
+        <!--{-->
+              console.log(xmlhttp.responseText);
+        <!--}-->
+
+        document.getElementById("content").innerHTML=xmlhttp.responseText;
+    }
+    xmlhttp.open("GET",arm);
+    xmlhttp.send(null);
+}
+loadXMLDoc();
+
+    </script>
+    <title>用户协议</title>
+</head>
+<body>
+<div class="wrapper">
+    <h1>用户协议</h1>
+    <p id="content">content</p>
+</div>
+</body>
+</html>
