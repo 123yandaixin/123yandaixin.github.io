@@ -1,45 +1,15 @@
 <html>
 
-<header></header>
+<header>abc</header>
 
 <body>
 
 
 <div>
-  <img src="file:///sdcard/2.jpg" id="file1"/>
+  <img src="file:///data/data/com.example.webview2_bug2/shared_prefs/WebViewChromiumPrefs.xml" id="file1"/>
 </div>
 
 </body>
-
-<script>
-
-window.onload=function(){
-
-var file1 = document.getElementById('file1');
-        var reader
-        if (FileReader) {
-            reader = new FileReader();
-        } else {
-            alert('您的浏览器不支持FileReader对象');
-        }
-        //1.读取为文本
-        var file1 = document.getElementById('file1');
-        file1.onchange = function () {
-            var file = file1.files[0];
-            //判断读取的第一个文件是否是文本文件
-            if (/text\/\w+/.test(file.type)) {
-                //以文本的方式读取内容
-                reader.readAsText(file, 'gbk');
-                reader.onload = function () {
-                    document.getElementById('result').innerHTML = reader.result;
-                }
-            } else {
-                alert('读取的不是文本文件');
-            }
-        }
-
-}
-</script>
 
 
 </html>
