@@ -66,8 +66,8 @@
 
            bridge.registerHandler("functionInJs", function(data, responseCallback) {
                alert(data);
-               var data2 = document.getElementById("text1").value;
-               var responseData = "我是Android调用js方法返回的数据---"+ data2;
+               //var data2 = document.getElementById("text1").value;
+               var responseData = "我是Android调用js方法返回的数据---";
                responseCallback(responseData);
            });
        })
