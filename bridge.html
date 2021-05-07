@@ -13,7 +13,7 @@
                'submitFromWeb'
                , {'param': "JS成功接收到数据---"}
                , function(responseData) {
-                    alert(responseData);
+                    //alert(responseData);
 					alert(responseData+"2");
                }
            );
@@ -48,7 +48,7 @@
            //Android调用js方法：functionInJs方法名称需要保持一致 ，并返回给Android通知
  
            bridge.registerHandler("functionInJs", function(data, responseCallback) {
-                alert(data);
+                //alert(data);
 				alert(data+"2");
                var data = document.getElementById("text1").value;
                var responseData = "我是Android调用js方法返回的数据---"+ data;
