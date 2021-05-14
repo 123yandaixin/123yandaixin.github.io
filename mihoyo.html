@@ -1,6 +1,6 @@
 <html>
 
-<head>use abc</head>
+<head>use def</head>
 
 <body>
 
@@ -12,13 +12,13 @@
 
 window.onload=function(){
   
+MiHoYoJSInterface.postMessage("{\"method\":\"genAppAuthKey\",\"callback\":\"jscallback\",\"payload\":\"abcd\"}");
 
-var arr = ["https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2F81dfe3b12316064e56a12ac52e82fab118b8e96e.jpg&refer=http%3A%2F%2Fi0.hdslb.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1623482108&t=779510f18575ba354d60659bd5ea2496"];
-strArr=arr.toString();
-var getArr = strArr.split(",");
-MiHoYoJSInterface.showBigImg(getArr,1);
-alert(strArr);
 }
+  
+function mhyWebBridge(msg){
+            console.log(msg);
+        }
 </script>
 
 
