@@ -1,6 +1,6 @@
 <html>
 
-<head>use def</head>
+<head>use ghi</head>
 
 <body>
 
@@ -12,9 +12,12 @@
 
 window.onload=function(){
   
-MiHoYoJSInterface.postMessage("{\"hashcode\":"genAppAuthKey",\"rawType\":"jscallback",\"type\":"abcd"}");
+MiHoYoJSInterface.postMessage("{\"method\":"genAppAuthKey",\"callback\":"jscallback"}");
 //   MiHoYoJSInterface.shouldLogin();
-MiHoYoJSInterface.closePage();
+  
+var test=function (){MiHoYoJSInterface.closePage();};
+setTimeout(test,500);
+
 
 }
   
