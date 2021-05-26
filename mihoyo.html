@@ -1,6 +1,6 @@
 <html>
 
-<head>use abc</head>
+<head>use def</head>
 
 <body>
 
@@ -24,7 +24,8 @@ window.onload=function(){
 }
   
 function mhyWebBridge(msg1,msg2){
-            alert(msg2);
+  var jsonStr = JSON.stringify(msg2);
+            alert(jsonStr);
         }
 </script>
 
