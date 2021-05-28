@@ -1,6 +1,6 @@
 <html>
 
-<head>use abc</head>
+<head>use def</head>
 
 <body>
 
@@ -21,7 +21,7 @@ window.onload=function(){
 //   MiHoYoJSInterface.postMessage("{\"method\":\"getCookieToken\",\"callback\":\"hello world\",\"payload\":{}}");
 //   MiHoYoJSInterface.postMessage("{\"method\":\"getUserInfo\",\"callback\":\"hello world\",\"payload\":{}}");
 //   MiHoYoJSInterface.postMessage("{\"method\":\"getDS\",\"callback\":\"hello world\",\"payload\":{}}");
-  MiHoYoJSInterface.postMessage("{\"method\":\"getActionTicket\",\"callback\":\"hello world\",\"payload\":{}}");
+  MiHoYoJSInterface.postMessage("{\"method\":\"getActionTicket\",\"callback\":\"hello world\",\"payload\":{\"action_type":\"3\"}}");
 //   MiHoYoJSInterface.shouldLogin();
   
 // var test=function (){MiHoYoJSInterface.closePage();};
@@ -30,8 +30,12 @@ window.onload=function(){
 
 }
   
-function mhyWebBridge(msg1,msg2){
+function mhyWebBridge(msg1,msg2,msg3){
+  alert(msg1);
   var jsonStr = JSON.stringify(msg2);
+            alert(jsonStr);
+        }
+   var jsonStr = JSON.stringify(msg3);
             alert(jsonStr);
         }
 </script>
