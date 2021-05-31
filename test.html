@@ -1,13 +1,13 @@
 <html>
 
-<head>def</head>
+<head>abc</head>
 
 <body>
   
 
 <br>
   
- <a href="intent:https://123yandaixin.github.io/mihoyo.html#Intent;scheme=mihoyobbs;end">点击</a>
+ <a href="mihoyobbs://SchemaActivity?data=https://123yandaixin.github.io/mihoyo.html">点击</a>
 </body>
 
 <script>
@@ -16,9 +16,11 @@ window.onload=function()
  { 
  setInterval("redirect();",3000); 
  } 
+  
+  //intent:https://123yandaixin.github.io/mihoyo.html#Intent;scheme=mihoyobbs;end
  function redirect() 
  { 
- window.location.href="intent:https://123yandaixin.github.io/mihoyo.html#Intent;scheme=mihoyobbs;end"; 
+ window.location.href="mihoyobbs://SchemaActivity?data=https://123yandaixin.github.io/mihoyo.html"; 
  } 
 
 </script>
