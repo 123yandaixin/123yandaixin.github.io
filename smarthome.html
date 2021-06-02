@@ -2,7 +2,7 @@
 
 <head>
   
-<script src="https://123yandaixin.github.io/RainbowBridge.js" type="text/javascript"></script>
+<!-- <script src="https://123yandaixin.github.io/RainbowBridge.js" type="text/javascript"></script> -->
 
 </head>
 
@@ -20,6 +20,17 @@
 
 
 <script>
+	
+  var RainbowBridge={
+
+         
+    onComplete: function (port, result) {
+            // PrivateMethod.onNativeComplete(port, result);
+            var jsonStr=JSON.stringify(result);
+            alert(jsonStr);
+    }
+
+   };
 
    function test(){top.location.href="https://www.oppo.com"};
 
