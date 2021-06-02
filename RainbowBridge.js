@@ -18,7 +18,7 @@
 //     var ua = win.navigator.userAgent;
 //     var JS_BRIDGE_PROTOCOL_SCHEMA = "rainbow";
 //     var increase = 1;
-//     var RainbowBridge = win.RainbowBridge || (win.RainbowBridge = {});
+    var RainbowBridge = win.RainbowBridge || (win.RainbowBridge = {});
 
     var ExposeMethod = {
 
