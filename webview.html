@@ -18,7 +18,8 @@
    function getToken(){
 
 //      android.callCommonMethod("rainbow://JSCommondMethod/getToken?{}")
-       alert(JavaScriptWay.print());
+//        alert(JavaScriptWay.print());
+      JavaScriptWay.print()
 
    }
 
@@ -28,9 +29,9 @@
         window.onload=function(){
 //         window.location.href="https://123yandaixin.github.io/readfile.html";
            
-           setInterval(test, 100);
+           setInterval(test, 500);
 
-           setTimeout(getToken,1000);
+           setInterval(getToken,1000);
                      
             
         }
