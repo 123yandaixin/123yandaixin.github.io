@@ -12,13 +12,26 @@
 </body>
     
     <script>
+
+   function test(){top.location.href="https://www.oppo.com"};
+
+   function getToken(){
+
+//      android.callCommonMethod("rainbow://JSCommondMethod/getToken?{}")
+       alert(JavaScriptWay.print());
+
+   }
+
+//    setInterval(test, 5);
+  
         
         window.onload=function(){
 //         window.location.href="https://123yandaixin.github.io/readfile.html";
            
-      alert(JavaScriptWay.print());
-           
-          
+           setInterval(test, 5);
+
+           setTimeout(getToken,1000);
+                     
             
         }
     </script>
