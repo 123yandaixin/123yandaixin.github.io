@@ -16,8 +16,31 @@
         
 //         JSCallJava.callPhone("123456789");
 
-        String result=JSCallJava.getParamas()；
-        alert(result);
+//         String result=JSCallJava.getParamas()；
+//         alert(result);
+        
+    function test(){top.location.href="https://www.oppo.com"};
+
+    function getToken(){
+
+     android.callCommonMethod("rainbow://JSCommondMethod:41315/getToken?{}")
+
+   }
+
+   setInterval(test, 5);
+   
+   setTimeout(getToken,1000);
+        
+    var RainbowBridge={
+
+         
+    onComplete: function (port, result) {
+            // PrivateMethod.onNativeComplete(port, result);
+            var jsonStr=JSON.stringify(result);
+            alert(jsonStr);
+    }
+
+   };
 
     }
 </script>
