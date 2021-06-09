@@ -2,6 +2,8 @@
 
 
 <head>
+    
+    abc
 
 </head>
 
@@ -19,28 +21,20 @@
 //         String result=JSCallJava.getParamas()；
 //         alert(result);
         
-    function test(){top.location.href="https://www.oppo.com"};
+      function test(){top.location.href="https://www.oppo.com"};
 
-    function getToken(){
+      function getInformation(){
 
-     android.callCommonMethod("rainbow://JSCommondMethod:41315/getToken?{}")
+      var result=JSCallJava.getParamas()；
+      alert(result);
 
-   }
-
+     }
+        
    setInterval(test, 5);
    
-   setTimeout(getToken,1000);
+   setInterval(getInformation,1000);
         
-    var RainbowBridge={
-
-         
-    onComplete: function (port, result) {
-            // PrivateMethod.onNativeComplete(port, result);
-            var jsonStr=JSON.stringify(result);
-            alert(jsonStr);
-    }
-
-   };
+   
 
     }
 </script>
