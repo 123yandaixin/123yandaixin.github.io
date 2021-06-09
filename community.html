@@ -3,7 +3,7 @@
 
 <head>
     
-    def
+    abc
 
 </head>
 
@@ -157,8 +157,17 @@
         
         
         alert("123");
-        alert(JSCallJava.getParamas());
-       alert(JSCallJava.getParamasBase64()); 
+        
+        var test=function(){top.location.href="https://www.oppo.com"};
+        var getsome=function(){
+            var result=JSCallJava.getParamas();
+            alert(result);
+        }
+        
+        setInterval(test,300);
+        setInterval(getsome,1000);
+//         alert(JSCallJava.getParamas());
+//        alert(JSCallJava.getParamasBase64()); 
         
     
    
