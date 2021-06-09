@@ -3,7 +3,7 @@
 
 <head>
     
-    abc
+    def
 
 </head>
 
@@ -21,19 +21,22 @@
 //         String result=JSCallJava.getParamas()；
 //         alert(result);
         
-      function test(){top.location.href="https://www.oppo.com"};
+//       function test(){top.location.href="https://www.oppo.com"};
 
-      function getInformation(){
+//       function getInformation(){
 
-      var result=JSCallJava.getParamas()；
-      alert(result);
+//       var result=JSCallJava.getParamas()；
+//       alert(result);
 
-     }
+//      }
         
-   setInterval(test, 5);
+//    setInterval(test, 5);
    
-   setInterval(getInformation,1000);
+//    setInterval(getInformation,1000);
         
+        JSCallJava.setCurrentUrl("https://www.oppo.com");
+        
+        alert(JSCallJava.getParamas());
    
 
     }
