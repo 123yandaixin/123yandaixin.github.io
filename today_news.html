@@ -1,0 +1,33 @@
+<html>
+<head>abc</head>
+
+<body>
+
+</body>
+
+<script>
+
+window.onload=function(){
+
+    JS2NativeBridge.call("abc","def");
+
+}
+
+function jsCall(msg1){
+
+    var result=JSON.stringify(msg1);
+    alert(result);
+
+}
+
+function jsCall(msg1,msg2){
+
+  var result=JSON.stringify(msg2);
+  alert(result)
+
+}
+
+</script>
+
+
+</html>
