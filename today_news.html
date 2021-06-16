@@ -1,5 +1,5 @@
 <html>
-<head>abc</head>
+<head>def</head>
 
 <body>
 
@@ -13,17 +13,16 @@ window.onload=function(){
 
 }
 
-function jsCall(msg1){
+var Native2JSBridge={
 
-    var result=JSON.stringify(msg1);
-    alert(result);
+    _handleMessageFromApp:function(msg1,msg2){
 
-}
+         var result=JSON.stringify(msg2);
 
-function jsCall(msg1,msg2){
+         alert(msg1);
+         alert(msg2);
 
-  var result=JSON.stringify(msg2);
-  alert(result)
+    }
 
 }
 
