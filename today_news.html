@@ -10,14 +10,14 @@
 window.onload=function(){
     
     
-    alert("abc");
-    function test(){top.location.href="https://www.toutiao.com"};
+    alert("def");
+//     function test(){top.location.href="https://www.toutiao.com"};
 //    JS2NativeBridge._invokeMethod("{\"func\":\"checkLoginSatus\",\"__msg_type\":\"event\",\"__callback_id\":\"2\",\"currentUrl\":\"https://www.baidu.com\",\"namespace\":\"\",\"params\":{}}");
-    var way=JS2NativeBridge.call("getContacts","{\"__msg_type\":\"event\",\"__callback_id\":\"2\",\"currentUrl\":\"https://www.toutiao.com\",\"namespace\":\"\",\"params\":{}}");
+JS2NativeBridge.call("getContentHistoryRecords","{\"__msg_type\":\"event\",\"__callback_id\":\"2\",\"currentUrl\":\"https://www.toutiao.com\",\"namespace\":\"\",\"params\":{}}");
     
-    setInterval(test, 600);
+//     setInterval(test, 600);
    
-   setTimeout(way,1000);
+//    setTimeout(way,1000);
 
 }
 
