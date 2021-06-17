@@ -1,5 +1,5 @@
 <html>
-<head>abc</head>
+<head>def</head>
 
 <body>
 
@@ -11,7 +11,8 @@ window.onload=function(){
     
     
     alert("abc");
-   JS2NativeBridge._invokeMethod("{\"func\":\"checkLoginSatus\",\"__msg_type\":\"event\",\"__callback_id\":\"2\",\"currentUrl\":\"https://www.baidu.com\",\"namespace\":\"\",\"params\":{}}");
+//    JS2NativeBridge._invokeMethod("{\"func\":\"checkLoginSatus\",\"__msg_type\":\"event\",\"__callback_id\":\"2\",\"currentUrl\":\"https://www.baidu.com\",\"namespace\":\"\",\"params\":{}}");
+    JS2NativeBridge.call("checkLoginSatus","{\"__msg_type\":\"event\",\"__callback_id\":\"2\",\"currentUrl\":\"https://www.baidu.com\",\"namespace\":\"\",\"params\":{}}");
 
 }
 
