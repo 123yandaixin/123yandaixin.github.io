@@ -1,0 +1,24 @@
+<html>
+
+<head>music</head>
+<body>
+
+
+</body>
+
+<script>
+    window.onload=function(){
+
+        alert(musicApp.getUrl())
+        musicApp.getDevice()
+
+
+    }
+
+    window.bridge=function(info){
+        var result=JSON.stringify(info)
+        alert(result)
+    }
+
+</script>
+</html>
