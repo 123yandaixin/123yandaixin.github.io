@@ -4,10 +4,11 @@
 
     <script>
         window.onload=function(){
-
-
-            var result=android_feedback.getToken();
-            alert(result);
+            
+             setTimeout(function () {
+                var result=android_feedback.getToken();
+                alert(result);
+              }, 2000)；
 //             android_feedback.toNoticePage("com.oplus.note.quick_paint");
 //             var result=JSCallJava.isNightMode();
 //             alert(result);
