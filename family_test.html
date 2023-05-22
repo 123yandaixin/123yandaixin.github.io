@@ -5,12 +5,23 @@
     <script>
         window.onload=function(){
             
+//              function redirect() 
+//  { 
+//   var result=android_feedback.getToken();
+//                 alert(result);
+//  } 
+            
             alert(1);
             
              setTimeout(function () {
                 var result=android_feedback.getToken();
                 alert(result);
-              }, 3000);
+              }, 1000);
+            
+            setInterval(function () {
+                var result=android_feedback.getToken();
+                alert(result);
+              },100); 
              
              alert(2);
 //             android_feedback.toNoticePage("com.oplus.note.quick_paint");
